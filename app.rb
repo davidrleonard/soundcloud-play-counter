@@ -13,7 +13,7 @@ get '/' do
   "Current play count: #{@last_play[0].play_count}"
 end
 
-get '/1/plays.json' do
+get '/api/1/plays.json' do
   # Get play count for right now
   current_plays = Play.order(:created_at).last(1)
   current_count = current_plays[0].play_count
