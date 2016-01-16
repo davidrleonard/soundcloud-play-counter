@@ -5,10 +5,6 @@ require './config/environments' # database configuration
 require './models/plays'
 
 get '/' do
-  @plays = Play.all
-  @plays.each do |play|
-    puts play.play_count
-  end
   @last_play = Play.last(1)
   "Current play count: #{@last_play[0].play_count}"
 end

@@ -1,8 +1,6 @@
 Soundcloud Play Counter
 =========
 
-## What is it
-
 We want to get data about how many plays our podcasts are getting over time on Soundcloud. Unfortunately, the Soundcloud API only lets us get all time total plays for our tracks.
 
 This simple Ruby application is meant to go out every 6 hours, get the total play count for all tracks from a user's Soundcloud account, and store it in a database. It also exposes an API to show total all-time plays over time, and plays in the last 30 days.
