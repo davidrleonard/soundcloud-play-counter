@@ -1,17 +1,17 @@
 Soundcloud Play Counter
 =========
 
-# What is it
+## What is it
 
 We want to get data about how many plays our podcasts are getting over time on Soundcloud. Unfortunately, the Soundcloud API only lets us get all time total plays for our tracks.
 
 This simple Ruby application is meant to go out every 6 hours, get the total play count for all tracks from a user's Soundcloud account, and store it in a database. It also exposes an API to show total all-time plays over time, and plays in the last 30 days.
 
-# Dependencies
+## Dependencies
 
 See the `Gemfile`. At a basic level, it uses Sinatra to serve API requests, and the Whenever gem to run a regular rake task harvesting data from the Soundcloud API, and ActiveRecord/sqlite3 to store data.
 
-# How to install it
+## How to install it
 
 You'll need Ruby, Bundler and some kind of Ruby environment manager (i.e. RVM) to run this app. You'll also need sqlite3.
 
@@ -33,7 +33,7 @@ $ bundle exec app.rb
 
 Your application should now be running. [Check it out](http://localhost:4567/api/1/plays.json).
 
-# Scheduling regular Soundcloud API calls
+## Scheduling regular Soundcloud API calls
 
 You'll need to regularly go out and get data from the Soundcloud API and put it into your local database to provide you with the data to do analytics over time. To accomplish this, we use the Whenever gem. A pre-set schedule has been specified in `config/schedule.rb` that runs the Rake task `plays:get_plays` every 6 hours.
 
@@ -50,7 +50,7 @@ If you want to stop the crontab after it has been started, clear it:
 $ bundle exec whenever -c # clears the crontab
 ```
 
-# License
+## License
 
 The MIT License (MIT)
 
