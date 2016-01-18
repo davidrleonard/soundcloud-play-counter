@@ -5,8 +5,11 @@ require './config/environments' # database configuration
 require './models/plays'
 
 get '/' do
-  @last_play = Play.last(1)
-  "Current play count: #{@last_play[0].play_count}"
+  # @last_play = Play.last(1)
+  # "Current play count: #{@last_play[0].play_count}"
+
+  # Shhhh. Just say hi.
+  'Hi.'
 end
 
 get '/api/1/plays.json' do
