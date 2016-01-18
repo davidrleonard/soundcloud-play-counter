@@ -10,3 +10,4 @@ gem 'sinatra-contrib' # To respond with JSON
 gem 'sqlite3'
 gem 'rake'
 gem 'whenever', require: false # To schedule our tasks
+gem 'unicorn' # to serve requests
