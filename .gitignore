@@ -1,2 +1,4 @@
 *.sqlite3
 secrets.yml
+logs/*
+pids/*
